@@ -74,12 +74,6 @@
 
 - (instancetype)addConstraintWithSuperview:(UIView *)superview view:(UIView *)view viewLayoutAttribute:(NSLayoutAttribute)viewLayoutAttribute toView:(UIView * _Nullable)toView toViewLayoutAttribute:(NSLayoutAttribute)toViewLayoutAttribute constant:(CGFloat)constant {
     @try {
-        
-        if (view.superview == nil) {
-            NSLog(@"error 请先添加该视图!");
-            return nil;
-        }
-        
         view.translatesAutoresizingMaskIntoConstraints = NO;
         [self removeConstraintWithLayoutAttribute:viewLayoutAttribute];
         
@@ -138,18 +132,18 @@
 }
 
 - (CGFloat)getConstraintConstantWithSuperview:(UIView *)superview view:(UIView *)view viewLayoutAttribute:(NSLayoutAttribute)viewLayoutAttribute {
-    if (view.superview == nil) {
-        NSLog(@"error: 请先添加该视图!");
+    @try {
+        for (NSLayoutConstraint *constraint in superview.constraints) {
+            if (constraint.firstItem == view && constraint.firstAttribute == viewLayoutAttribute) {
+                return [constraint constant];
+            }
+        }
+        
+        return 0;
+    } @catch (NSException *exception) {
+        NSLog(@"error: %@", exception);
         return 0;
     }
-    
-    for (NSLayoutConstraint *constraint in superview.constraints) {
-        if (constraint.firstItem == view && constraint.firstAttribute == viewLayoutAttribute) {
-            return [constraint constant];
-        }
-    }
-    
-    return 0;
 }
 
 - (CGFloat)getHeightConstraintConstant {
