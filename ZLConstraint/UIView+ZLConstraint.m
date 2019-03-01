@@ -1,5 +1,5 @@
 //
-//  UIView+ZLConstraint.m
+//  UIView+ZLConstraint.h
 //  ZLConstraint
 //
 //  Created by ZhangLiang on 2019/1/20.
@@ -74,23 +74,10 @@
 
 - (instancetype)addConstraintWithSuperview:(UIView *)superview view:(UIView *)view viewLayoutAttribute:(NSLayoutAttribute)viewLayoutAttribute toView:(UIView * _Nullable)toView toViewLayoutAttribute:(NSLayoutAttribute)toViewLayoutAttribute constant:(CGFloat)constant {
     @try {
+        
         if (view.superview == nil) {
             NSLog(@"error 请先添加该视图!");
             return nil;
-        }
-        
-        switch (viewLayoutAttribute) {
-            case NSLayoutAttributeTop:
-            case  NSLayoutAttributeBottom:
-            case NSLayoutAttributeLeading:
-            case NSLayoutAttributeTrailing: {
-                if (superview != view.superview) {
-                    return nil;
-                }
-                break;
-            }
-            default:
-                break;
         }
         
         view.translatesAutoresizingMaskIntoConstraints = NO;
@@ -106,12 +93,24 @@
     }
 }
 
+- (instancetype)addCenterYEqualCenterYConstraintWithToView:(UIView *)toView constant:(CGFloat)constant {
+    return [self addConstraintWithSuperview:self.superview view:self viewLayoutAttribute:NSLayoutAttributeCenterY toView:toView toViewLayoutAttribute:NSLayoutAttributeCenterY constant:constant];
+}
+
+- (instancetype)addCenterXEqualCenterXConstraintWithToView:(UIView *)toView constant:(CGFloat)constant {
+    return [self addConstraintWithSuperview:self.superview view:self viewLayoutAttribute:NSLayoutAttributeCenterX toView:toView toViewLayoutAttribute:NSLayoutAttributeCenterX constant:constant];
+}
+
 - (instancetype)addLeadingEqualLeadingConstraintWithToView:(UIView *)toView constant:(CGFloat)constant {
     return [self addConstraintWithSuperview:self.superview view:self viewLayoutAttribute:NSLayoutAttributeLeading toView:toView toViewLayoutAttribute:NSLayoutAttributeLeading constant:constant];
 }
 
 - (instancetype)addLeadingEqualTrailingConstraintWithToView:(UIView *)toView constant:(CGFloat)constant {
     return [self addConstraintWithSuperview:self.superview view:self viewLayoutAttribute:NSLayoutAttributeLeading toView:toView toViewLayoutAttribute:NSLayoutAttributeTrailing constant:constant];
+}
+
+- (instancetype)addTrailingEqualLeadingConstraintWithToView:(UIView *)toView constant:(CGFloat)constant {
+    return [self addConstraintWithSuperview:self.superview view:self viewLayoutAttribute:NSLayoutAttributeTrailing toView:toView toViewLayoutAttribute:NSLayoutAttributeLeading constant:constant];
 }
 
 - (instancetype)addTrailingEqualTrailingConstraintWithToView:(UIView *)toView constant:(CGFloat)constant {

@@ -68,6 +68,20 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)addConstraintWithSuperview:(UIView *)superview view:(UIView *)view viewLayoutAttribute:(NSLayoutAttribute)viewLayoutAttribute toView:(UIView * _Nullable)toView toViewLayoutAttribute:(NSLayoutAttribute)toViewLayoutAttribute constant:(CGFloat)constant;
 
 /**
+ 添加水平居中约束属性
+ @param toView     关联视图
+ @param constant   大小值
+ */
+- (instancetype)addCenterYEqualCenterYConstraintWithToView:(UIView *)toView constant:(CGFloat)constant;
+
+/**
+ 添加垂直居中约束属性
+ @param toView     关联视图
+ @param constant   大小值
+ */
+- (instancetype)addCenterXEqualCenterXConstraintWithToView:(UIView *)toView constant:(CGFloat)constant;
+
+/**
  添加左对左约束属性
  @param toView     关联视图
  @param constant   大小值
@@ -80,6 +94,13 @@ NS_ASSUME_NONNULL_BEGIN
  @param constant   大小值
  */
 - (instancetype)addLeadingEqualTrailingConstraintWithToView:(UIView *)toView constant:(CGFloat)constant;
+
+/**
+ 添加右对左约束属性
+ @param toView     关联视图
+ @param constant   大小值
+ */
+- (instancetype)addTrailingEqualLeadingConstraintWithToView:(UIView *)toView constant:(CGFloat)constant;
 
 /**
  添加右对右约束属性
