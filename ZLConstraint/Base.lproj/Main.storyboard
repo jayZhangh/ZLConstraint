@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ExX-qC-piz">
-                                <rect key="frame" x="177.5" y="627" width="20" height="20"/>
+                                <rect key="frame" x="177.5" y="323.5" width="20" height="20"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ExX-qC-piz" secondAttribute="height" multiplier="1:1" id="WRB-ZI-6xg"/>
@@ -29,7 +29,7 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ExX-qC-piz" secondAttribute="bottom" constant="20" id="Md4-Cz-l2P"/>
+                            <constraint firstItem="ExX-qC-piz" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Fbr-kx-W10"/>
                             <constraint firstItem="ExX-qC-piz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="q1b-2t-chp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

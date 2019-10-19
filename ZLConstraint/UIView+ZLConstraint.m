@@ -20,25 +20,6 @@
     return self;
 }
 
-//- (instancetype)removeConstraintWithSuperview:(UIView *)superview superviewLayoutAttribute:(NSLayoutAttribute)superviewLayoutAttribute view:(UIView *)view layoutAttribute:(NSLayoutAttribute)layoutAttribute priority:(UILayoutPriority)priority shouldBeArchived:(BOOL)shouldBeArchived firstAnchor:(NSLayoutAnchor *)firstAnchor secondAnchor:(NSLayoutAnchor *)secondAnchor relation:(NSLayoutRelation)relation multiplier:(CGFloat)multiplier active:(BOOL)active {
-////    id firstItem;
-//    //BOOL shouldBeArchived;
-////    @property (readonly) NSLayoutAttribute firstAttribute;
-////    @property (nullable, readonly, assign) id secondItem;
-////    @property (readonly) NSLayoutAttribute secondAttribute;
-////    NSLayoutAnchor *firstAnchor NS_AVAILABLE(10_12, 10_0);
-////    @property (readonly, copy, nullable) NSLayoutAnchor *secondAnchor NS_AVAILABLE(10_12, 10_0);
-////    @property (readonly) NSLayoutRelation relation;
-////    @property (readonly) CGFloat multiplier;
-//    for (NSLayoutConstraint *constraint in superview.constraints) {
-//        if (constraint.firstItem == view && constraint.firstAttribute == layoutAttribute && constraint.secondItem == superview && constraint.secondAttribute == superviewLayoutAttribute  && constraint.priority == priority && constraint.shouldBeArchived == shouldBeArchived && constraint.firstAnchor == firstAnchor && constraint.secondAnchor == secondAnchor && constraint.relation == relation && constraint.multiplier == multiplier && constraint.active == active) {
-//            [superview removeConstraint:constraint];
-//        }
-//    }
-//
-//    return self;
-//}
-
 - (instancetype)removeConstraintWithSuperview:(UIView *)superview view:(UIView *)view layoutAttribute:(NSLayoutAttribute)layoutAttribute {
     for (NSLayoutConstraint *constraint in superview.constraints) {
         if (constraint.firstItem == view && constraint.firstAttribute == layoutAttribute) {

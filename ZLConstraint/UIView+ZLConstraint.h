@@ -17,10 +17,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)removeConstraintWithSuperview:(UIView *)superview superviewLayoutAttribute:(NSLayoutAttribute)superviewLayoutAttribute view:(UIView *)view layoutAttribute:(NSLayoutAttribute)layoutAttribute priority:(UILayoutPriority)priority shouldBeArchived:(BOOL)shouldBeArchived firstAnchor:(NSLayoutAnchor *)firstAnchor secondAnchor:(NSLayoutAnchor *)secondAnchor relation:(NSLayoutRelation)relation multiplier:(CGFloat)multiplier active:(BOOL)active;
 
-//- (instancetype)removeConstraintWithSuperview:(UIView *)superview superviewLayoutAttribute:(NSLayoutAttribute)superviewLayoutAttribute view:(UIView *)view layoutAttribute:(NSLayoutAttribute)layoutAttribute priority:(UILayoutPriority)priority shouldBeArchived:(BOOL)shouldBeArchived firstAnchor:(NSLayoutAnchor *)firstAnchor secondAnchor:(NSLayoutAnchor *)secondAnchor relation:(NSLayoutRelation)relation multiplier:(CGFloat)multiplier active:(BOOL)active;
-
-//- (instancetype)removeConstraintWithSuperview:(UIView *)superview superviewLayoutAttribute:(NSLayoutAttribute)superviewLayoutAttribute view:(UIView *)view layoutAttribute:(NSLayoutAttribute)layoutAttribute;
-
 /**
  删除约束属性
  @param superview           父视图
