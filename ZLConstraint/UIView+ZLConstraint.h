@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 // [view.superview layoutIfNeeded]; add animation.
-#define ZLScaleValue(value) value/320.0*[UIScreen mainScreen].bound.size.width
+#define ZLScaleValue(scaleValue) scaleValue/320.0*[UIScreen mainScreen].bounds.size.width
 
 NS_ASSUME_NONNULL_BEGIN
 
