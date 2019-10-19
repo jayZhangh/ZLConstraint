@@ -10,6 +10,21 @@
 
 @implementation UIView (ZLConstraint)
 
+- (instancetype)removeConstraintWithSuperview:(UIView *)superview superviewLayoutAttribute:(NSLayoutAttribute)superviewLayoutAttribute view:(UIView *)view layoutAttribute:(NSLayoutAttribute)layoutAttribute {
+//    id firstItem;
+//    @property (readonly) NSLayoutAttribute firstAttribute;
+//    @property (nullable, readonly, assign) id secondItem;
+//    @property (readonly) NSLayoutAttribute secondAttribute;
+    for (NSLayoutConstraint *constraint in superview.constraints) {
+        if (constraint.firstItem == view && constraint.firstAttribute == layoutAttribute && constraint.secondItem == superview && constraint.secondAttribute == superviewLayoutAttribute) {
+            [superview removeConstraint:constraint];
+            //            break;
+        }
+    }
+    
+    return self;
+}
+
 - (instancetype)removeConstraintWithSuperview:(UIView *)superview view:(UIView *)view layoutAttribute:(NSLayoutAttribute)layoutAttribute {
     for (NSLayoutConstraint *constraint in superview.constraints) {
         if (constraint.firstItem == view && constraint.firstAttribute == layoutAttribute) {

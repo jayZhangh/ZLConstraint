@@ -8,9 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+#define ZLScaleValue(value) value/320.0*[UIScreen mainScreen].bound.size.width
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface UIView (ZLConstraint)
+
+- (instancetype)removeConstraintWithSuperview:(UIView *)superview superviewLayoutAttribute:(NSLayoutAttribute)superviewLayoutAttribute view:(UIView *)view layoutAttribute:(NSLayoutAttribute)layoutAttribute;
 
 /**
  删除约束属性
