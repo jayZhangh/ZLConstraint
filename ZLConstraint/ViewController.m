@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "UIView+ZLConstraint.h"
+#import "ZLConstraint/UIView+ZLConstraint.h"
 
 @interface ViewController ()
 
@@ -24,9 +24,9 @@
     view1.backgroundColor = [UIColor redColor];
     [self.view addSubview:view1];
     [[[[view1 addHeightConstraintWithConstant:50] addLeadingEqualLeadingConstraintWithToView:self.view constant:50] addTopEqualTopConstraintWithToView:self.view constant:50] addTrailingEqualTrailingConstraintWithToView:self.view constant:-50];
-    
+
     [[self.constraintView addWidthConstraintWithConstant:ZLScaleValue(20)] addHeightConstraintWithConstant:ZLScaleValue(20)];
-//    NSLog(@"%f",ZLScaleValue(20));
+    NSLog(@"%f",ZLScaleValue(20));
 }
 
 
