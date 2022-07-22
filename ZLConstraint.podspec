@@ -90,7 +90,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.source_files  = "ZLConstraint", "ZLConstraint/ZLConstraint/*.{h,m}"
-  spec.exclude_files = "ZLConstraint/ZLConstraint"
+  # spec.exclude_files = "ZLConstraint/ZLConstraint"
 
   # spec.public_header_files = "Classes/**/*.h"
 
