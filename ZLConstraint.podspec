@@ -89,7 +89,7 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "ZLConstraint", "ZLConstraint/ZLConstraint/UIView+ZLConstraint.h,ZLConstraint/ZLConstraint/UIView+ZLConstraint.m"
+  spec.source_files  = "ZLConstraint/ZLConstraint/*.{h,m}"
   # spec.exclude_files = "ZLConstraint/ZLConstraint"
 
   # spec.public_header_files = "Classes/**/*.h"
