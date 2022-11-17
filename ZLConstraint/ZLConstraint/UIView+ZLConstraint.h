@@ -136,6 +136,13 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)addBottomEqualBottomConstraintWithToView:(UIView *)toView constant:(CGFloat)constant;
 
 /**
+ 添加下对上约束属性
+ @param toView     关联视图
+ @param constant   大小值
+ */
+- (instancetype)addBottomEqualTopConstraintWithToView:(UIView *)toView constant:(CGFloat)constant;
+
+/**
  添加宽度约束属性
  @param constant   大小值
  */

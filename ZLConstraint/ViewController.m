@@ -26,8 +26,11 @@
     [[[[view1 addHeightConstraintWithConstant:50] addLeadingEqualLeadingConstraintWithToView:self.view constant:50] addTopEqualTopConstraintWithToView:self.view constant:50] addTrailingEqualTrailingConstraintWithToView:self.view constant:-50];
 
     [[self.constraintView addWidthConstraintWithConstant:ZLScaleValue(20)] addHeightConstraintWithConstant:ZLScaleValue(20)];
+    
+    [view1 removeTopConstraint];
+    [view1 addBottomEqualTopConstraintWithToView:self.constraintView constant:0];
+
     NSLog(@"%f",ZLScaleValue(20));
 }
-
 
 @end
