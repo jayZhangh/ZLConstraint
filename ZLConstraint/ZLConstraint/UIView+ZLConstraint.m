@@ -47,6 +47,14 @@
     return [self removeConstraintWithSuperview:self.superview view:self layoutAttribute:NSLayoutAttributeBottom];
 }
 
+- (instancetype)removeCenterXConstraint {
+    return [self removeConstraintWithSuperview:self.superview view:self layoutAttribute:NSLayoutAttributeCenterX];
+}
+
+- (instancetype)removeCenterYConstraint {
+    return [self removeConstraintWithSuperview:self.superview view:self layoutAttribute:NSLayoutAttributeCenterY];
+}
+
 - (instancetype)removeWidthConstraint {
     return [self removeConstraintWithSuperview:self view:self layoutAttribute:NSLayoutAttributeWidth];
 }
@@ -68,6 +76,12 @@
             break;
         case NSLayoutAttributeBottom:
             [self removeBottomConstraint];
+            break;
+        case NSLayoutAttributeCenterX:
+            [self removeCenterXConstraint];
+            break;
+        case NSLayoutAttributeCenterY:
+            [self removeCenterYConstraint];
             break;
         case NSLayoutAttributeWidth:
             [self removeWidthConstraint];
@@ -92,7 +106,7 @@
         
         return self;
     } @catch (NSException *exception) {
-        NSLog(@"error: %@", exception);
+        NSLog(@"exception: %@", exception);
         return nil;
     }
 }
@@ -155,7 +169,7 @@
         
         return 0;
     } @catch (NSException *exception) {
-        NSLog(@"error: %@", exception);
+        NSLog(@"exception: %@", exception);
         return 0;
     }
 }

@@ -46,6 +46,16 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)removeBottomConstraint;
 
 /**
+ 删除垂直居中约束属性
+ */
+- (instancetype)removeCenterXConstraint;
+
+/**
+ 删除水平居中约束属性
+ */
+- (instancetype)removeCenterYConstraint;
+
+/**
  删除宽度约束属性
  */
 - (instancetype)removeWidthConstraint;
@@ -158,7 +168,7 @@ NS_ASSUME_NONNULL_BEGIN
  获取约束属性的大小值
  @param superview               父视图
  @param view                    需要获取的视图
- @param viewLayoutAttribute     视图约束属性
+ @param viewLayoutAttribute     视图属性
  */
 - (CGFloat)getConstraintConstantWithSuperview:(UIView *)superview view:(UIView *)view viewLayoutAttribute:(NSLayoutAttribute)viewLayoutAttribute;
 
