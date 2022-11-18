@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "ZLConstraint"
-  spec.version      = "0.1.2"
+  spec.version      = "0.1.3"
   spec.summary      = "pod ZLConstraint"
 
   # This description is used to generate tags and improve search results.

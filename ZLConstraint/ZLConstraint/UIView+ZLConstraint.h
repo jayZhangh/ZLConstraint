@@ -26,16 +26,6 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)removeConstraintWithSuperview:(UIView *)superview view:(UIView *)view layoutAttribute:(NSLayoutAttribute)layoutAttribute;
 
 /**
- 删除左边约束属性
- */
-- (instancetype)removeLeadingConstraint;
-
-/**
- 删除右边约束属性
- */
-- (instancetype)removeTrailingConstraint;
-
-/**
  删除上边约束属性
  */
 - (instancetype)removeTopConstraint;
@@ -46,12 +36,22 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)removeBottomConstraint;
 
 /**
- 删除垂直居中约束属性
+ 删除左边约束属性
+ */
+- (instancetype)removeLeadingConstraint;
+
+/**
+ 删除右边约束属性
+ */
+- (instancetype)removeTrailingConstraint;
+
+/**
+ 删除水平居中约束属性
  */
 - (instancetype)removeCenterXConstraint;
 
 /**
- 删除水平居中约束属性
+ 删除垂直居中约束属性
  */
 - (instancetype)removeCenterYConstraint;
 
@@ -83,48 +83,6 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)addConstraintWithSuperview:(UIView *)superview view:(UIView *)view viewLayoutAttribute:(NSLayoutAttribute)viewLayoutAttribute toView:(UIView * _Nullable)toView toViewLayoutAttribute:(NSLayoutAttribute)toViewLayoutAttribute constant:(CGFloat)constant;
 
 /**
- 添加水平居中约束属性
- @param toView     关联视图
- @param constant   大小值
- */
-- (instancetype)addCenterYEqualCenterYConstraintWithToView:(UIView *)toView constant:(CGFloat)constant;
-
-/**
- 添加垂直居中约束属性
- @param toView     关联视图
- @param constant   大小值
- */
-- (instancetype)addCenterXEqualCenterXConstraintWithToView:(UIView *)toView constant:(CGFloat)constant;
-
-/**
- 添加左对左约束属性
- @param toView     关联视图
- @param constant   大小值
- */
-- (instancetype)addLeadingEqualLeadingConstraintWithToView:(UIView *)toView constant:(CGFloat)constant;
-
-/**
- 添加左对右约束属性
- @param toView     关联视图
- @param constant   大小值
- */
-- (instancetype)addLeadingEqualTrailingConstraintWithToView:(UIView *)toView constant:(CGFloat)constant;
-
-/**
- 添加右对左约束属性
- @param toView     关联视图
- @param constant   大小值
- */
-- (instancetype)addTrailingEqualLeadingConstraintWithToView:(UIView *)toView constant:(CGFloat)constant;
-
-/**
- 添加右对右约束属性
- @param toView     关联视图
- @param constant   大小值
- */
-- (instancetype)addTrailingEqualTrailingConstraintWithToView:(UIView *)toView constant:(CGFloat)constant;
-
-/**
  添加上对上约束属性
  @param toView     关联视图
  @param constant   大小值
@@ -153,6 +111,48 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)addBottomEqualTopConstraintWithToView:(UIView *)toView constant:(CGFloat)constant;
 
 /**
+ 添加左对左约束属性
+ @param toView     关联视图
+ @param constant   大小值
+ */
+- (instancetype)addLeadingEqualLeadingConstraintWithToView:(UIView *)toView constant:(CGFloat)constant;
+
+/**
+ 添加左对右约束属性
+ @param toView     关联视图
+ @param constant   大小值
+ */
+- (instancetype)addLeadingEqualTrailingConstraintWithToView:(UIView *)toView constant:(CGFloat)constant;
+
+/**
+ 添加右对右约束属性
+ @param toView     关联视图
+ @param constant   大小值
+ */
+- (instancetype)addTrailingEqualTrailingConstraintWithToView:(UIView *)toView constant:(CGFloat)constant;
+
+/**
+ 添加右对左约束属性
+ @param toView     关联视图
+ @param constant   大小值
+ */
+- (instancetype)addTrailingEqualLeadingConstraintWithToView:(UIView *)toView constant:(CGFloat)constant;
+
+/**
+ 添加水平居中约束属性
+ @param toView     关联视图
+ @param constant   大小值
+ */
+- (instancetype)addCenterXEqualCenterXConstraintWithToView:(UIView *)toView constant:(CGFloat)constant;
+
+/**
+ 添加垂直居中约束属性
+ @param toView     关联视图
+ @param constant   大小值
+ */
+- (instancetype)addCenterYEqualCenterYConstraintWithToView:(UIView *)toView constant:(CGFloat)constant;
+
+/**
  添加宽度约束属性
  @param constant   大小值
  */
@@ -173,14 +173,14 @@ NS_ASSUME_NONNULL_BEGIN
 - (CGFloat)getConstraintConstantWithSuperview:(UIView *)superview view:(UIView *)view viewLayoutAttribute:(NSLayoutAttribute)viewLayoutAttribute;
 
 /**
- 获取高度值
- */
-- (CGFloat)getHeightConstraintConstant;
-
-/**
  获取宽度值
  */
 - (CGFloat)getWidthConstraintConstant;
+
+/**
+ 获取高度值
+ */
+- (CGFloat)getHeightConstraintConstant;
 
 @end
 
