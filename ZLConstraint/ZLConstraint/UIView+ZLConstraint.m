@@ -21,14 +21,20 @@
 }
 
 - (instancetype)removeConstraintWithSuperview:(UIView *)superview view:(UIView *)view layoutAttribute:(NSLayoutAttribute)layoutAttribute {
-    for (NSLayoutConstraint *constraint in superview.constraints) {
-        if (constraint.firstItem == view && constraint.firstAttribute == layoutAttribute) {
-            [superview removeConstraint:constraint];
-            //            break;
+    @try {
+        for (NSLayoutConstraint *constraint in superview.constraints) {
+            if (constraint.firstItem == view && constraint.firstAttribute == layoutAttribute) {
+                [superview removeConstraint:constraint];
+                //            break;
+            }
         }
+        
+        return self;
+        
+    } @catch (NSException *exception) {
+        NSLog(@"exception: %@", exception);
+        return nil;
     }
-    
-    return self;
 }
 
 - (instancetype)removeTopConstraint {
@@ -172,6 +178,30 @@
         NSLog(@"exception: %@", exception);
         return 0;
     }
+}
+
+- (CGFloat)getTopConstraintConstant {
+    return [self getConstraintConstantWithSuperview:self.superview view:self viewLayoutAttribute:NSLayoutAttributeTop];
+}
+
+- (CGFloat)getBottomConstraintConstant {
+    return [self getConstraintConstantWithSuperview:self.superview view:self viewLayoutAttribute:NSLayoutAttributeBottom];
+}
+
+- (CGFloat)getLeadingConstraintConstant {
+    return [self getConstraintConstantWithSuperview:self.superview view:self viewLayoutAttribute:NSLayoutAttributeLeading];
+}
+
+- (CGFloat)getTrailingConstraintConstant {
+    return [self getConstraintConstantWithSuperview:self.superview view:self viewLayoutAttribute:NSLayoutAttributeTrailing];
+}
+
+- (CGFloat)getCenterXConstraintConstant {
+    return [self getConstraintConstantWithSuperview:self.superview view:self viewLayoutAttribute:NSLayoutAttributeCenterX];
+}
+
+- (CGFloat)getCenterYConstraintConstant {
+    return [self getConstraintConstantWithSuperview:self.superview view:self viewLayoutAttribute:NSLayoutAttributeCenterY];
 }
 
 - (CGFloat)getWidthConstraintConstant {

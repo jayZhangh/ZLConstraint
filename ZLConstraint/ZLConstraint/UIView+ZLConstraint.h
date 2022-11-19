@@ -173,6 +173,36 @@ NS_ASSUME_NONNULL_BEGIN
 - (CGFloat)getConstraintConstantWithSuperview:(UIView *)superview view:(UIView *)view viewLayoutAttribute:(NSLayoutAttribute)viewLayoutAttribute;
 
 /**
+ 获取上边值
+ */
+- (CGFloat)getTopConstraintConstant;
+
+/**
+ 获取下边值
+ */
+- (CGFloat)getBottomConstraintConstant;
+
+/**
+ 获取左边值
+ */
+- (CGFloat)getLeadingConstraintConstant;
+
+/**
+ 获取右边值
+ */
+- (CGFloat)getTrailingConstraintConstant;
+
+/**
+ 获取水平居中值
+ */
+- (CGFloat)getCenterXConstraintConstant;
+
+/**
+ 获取垂直居中值
+ */
+- (CGFloat)getCenterYConstraintConstant;
+
+/**
  获取宽度值
  */
 - (CGFloat)getWidthConstraintConstant;
