@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "ZLConstraint/UIView+ZLConstraint.h"
+#import "UIView+ZLConstraint.h"
 
 @interface ViewController ()
 
@@ -19,30 +19,30 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    // Do any additional setup after loading the view, typically from a nib.
     
     UIView *view1 = [[UIView alloc] init];
     view1.backgroundColor = [UIColor redColor];
     [self.view addSubview:view1];
     
-    [[[[view1 addHeightConstraintWithConstant:50] addLeadingEqualLeadingConstraintWithToView:self.view constant:50] addTrailingEqualTrailingConstraintWithToView:self.view constant:-50] addTopEqualTopConstraintWithToView:self.view constant:50];
+    [[[[view1 addHeightConstraintWithConstant:50] addLeadingEqualLeadingConstraintWithSuperview:self.view toView:self.view constant:50] addTrailingEqualTrailingConstraintWithSuperview:self.view toView:self.view constant:-50] addTopEqualTopConstraintWithSuperview:self.view toView:self.view constant:50];
     
     [[self.constraintView addWidthConstraintWithConstant:ZLScaleValue(20)] addHeightConstraintWithConstant:ZLScaleValue(20)];
     
-    [view1 removeTopConstraint];
-    [view1 addBottomEqualTopConstraintWithToView:self.constraintView constant:0];
-    
-    [view1 addBottomEqualTopConstraintWithToView:self.constraintView constant:10];
+    [view1 removeTopEqualTopConstraintWithSuperview:self.view toView:self.view];
+    [view1 addBottomEqualTopConstraintWithSuperview:self.view toView:self.constraintView constant:0];
+    [view1 addBottomEqualTopConstraintWithSuperview:self.view toView:self.constraintView constant:0];
     
     UIView *view2 = [[UIView alloc] init];
     view2.backgroundColor = [UIColor orangeColor];
     [self.view addSubview:view2];
     
-    [view2 addCenterXEqualCenterXConstraintWithToView:view1 constant:0];
-    [view2 addCenterYEqualCenterYConstraintWithToView:view1 constant:0];
+    [view2 addCenterXEqualCenterXConstraintWithSuperview:self.view toView:view1 constant:0];
+    [view2 addCenterYEqualCenterYConstraintWithSuperview:self.view toView:view1 constant:0];
     [[view2 addWidthConstraintWithConstant:50] addHeightConstraintWithConstant:50];
     
-    [view2 addCenterXEqualCenterXConstraintWithToView:self.constraintView constant:0];
-    [view2 addCenterYEqualCenterYConstraintWithToView:view1 constant:0];
+    [view2 addCenterXEqualCenterXConstraintWithSuperview:self.view toView:self.constraintView constant:0];
+    [view2 addCenterYEqualCenterYConstraintWithSuperview:self.view toView:view1 constant:0];
     
     NSLog(@"%f", ZLScaleValue(20));
 }

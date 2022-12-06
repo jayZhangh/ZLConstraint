@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,28 +17,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ExX-qC-piz">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aTF-In-OGv" userLabel="constraintView">
                                 <rect key="frame" x="177.5" y="323.5" width="20" height="20"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" systemColor="labelColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="ExX-qC-piz" secondAttribute="height" multiplier="1:1" id="WRB-ZI-6xg"/>
-                                    <constraint firstAttribute="width" constant="20" id="ren-sb-iLw"/>
+                                    <constraint firstAttribute="width" secondItem="aTF-In-OGv" secondAttribute="height" multiplier="1:1" id="bOU-7E-veq"/>
+                                    <constraint firstAttribute="height" constant="20" id="c3n-qG-kd5"/>
+                                    <constraint firstAttribute="width" constant="20" id="oWL-iq-zZE"/>
                                 </constraints>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="ExX-qC-piz" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Fbr-kx-W10"/>
-                            <constraint firstItem="ExX-qC-piz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="q1b-2t-chp"/>
+                            <constraint firstItem="aTF-In-OGv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5eG-ex-32u"/>
+                            <constraint firstItem="aTF-In-OGv" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Dk7-fu-1Cv"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="constraintView" destination="ExX-qC-piz" id="6Pv-9Q-G2Q"/>
+                        <outlet property="constraintView" destination="aTF-In-OGv" id="tBM-oc-WZ5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-30" y="28"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
