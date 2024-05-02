@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "ZLConstraint"
-  spec.version      = "0.1.8"
+  spec.version      = "0.1.81"
   spec.summary      = "pod ZLConstraint"
 
   # This description is used to generate tags and improve search results.
@@ -26,8 +26,7 @@ Pod::Spec.new do |spec|
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   spec.description  = "pod ZLConstraint."
 
-  # spec.homepage     = "https://github.com/jayZhangh/ZLConstraint"
-  spec.homepage     = "https://gitee.com/jay_zhangh/ZLConstraint"
+  spec.homepage     = "https://github.com/jayZhangh/ZLConstraint"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -52,8 +51,7 @@ Pod::Spec.new do |spec|
   #  profile URL.
   #
 
-  # spec.author             = { "jayZhangh" => "jay_zhangh@163.com" }
-  spec.author             = { "jay_zhangh" => "jay_zhangh@163.com" }
+  spec.author             = { "jayZhangh" => "jay_zhangh@163.com" }
   # Or just: spec.author    = "jayZhangh"
   # spec.authors            = { "jayZhangh" => "jay_zhangh@163.com" }
   # spec.social_media_url   = "https://twitter.com/jayZhangh"
@@ -80,9 +78,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  # spec.source       = { :git => "https://github.com/jayZhangh/ZLConstraint.git", :tag => "#{spec.version}" }
-  
-  spec.source       = { :git => "https://gitee.com/jay_zhangh/ZLConstraint.git", :tag => "#{spec.version}" }
+  spec.source       = { :git => "https://github.com/jayZhangh/ZLConstraint.git", :tag => "#{spec.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
