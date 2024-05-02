@@ -253,6 +253,91 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (instancetype)removeCenterYEqualCenterYConstraintWithSuperview:(UIView *)superview toView:(UIView *)toView;
 
+#pragma mark - REMOVE TO
+/**
+ 删除上对上约束属性
+ @param  toView             关联的视图
+ @return instancetype       当前视图对象
+ */
+- (instancetype)removeTopEqualTopConstraintWithToView:(UIView *)toView;
+
+/**
+ 删除上对下约束属性
+ @param  toView             关联的视图
+ @return instancetype       当前视图对象
+ */
+- (instancetype)removeTopEqualBottomConstraintWithToView:(UIView *)toView;
+
+/**
+ 删除下对下约束属性
+ @param  toView             关联的视图
+ @return instancetype       当前视图对象
+ */
+- (instancetype)removeBottomEqualBottomConstraintWithToView:(UIView *)toView;
+
+/**
+ 删除下对上约束属性
+ @param  toView             关联的视图
+ @return instancetype       当前视图对象
+ */
+- (instancetype)removeBottomEqualTopConstraintWithToView:(UIView *)toView;
+
+/**
+ 删除左对左约束属性
+ @param  toView             关联的视图
+ @return instancetype       当前视图对象
+ */
+- (instancetype)removeLeadingEqualLeadingConstraintWithToView:(UIView *)toView;
+
+/**
+ 删除左对右约束属性
+ @param  toView             关联的视图
+ @return instancetype       当前视图对象
+ */
+- (instancetype)removeLeadingEqualTrailingConstraintWithToView:(UIView *)toView;
+
+/**
+ 删除右对右约束属性
+ @param  toView             关联的视图
+ @return instancetype       当前视图对象
+ */
+- (instancetype)removeTrailingEqualTrailingConstraintWithToView:(UIView *)toView;
+
+/**
+ 删除右对左约束属性
+ @param  toView             关联的视图
+ @return instancetype       当前视图对象
+ */
+- (instancetype)removeTrailingEqualLeadingConstraintWithToView:(UIView *)toView;
+
+/**
+ 删除宽度对宽度约束属性
+ @param  toView             关联的视图
+ @return instancetype       当前视图对象
+ */
+- (instancetype)removeWidthEqualWidthConstraintWithToView:(UIView *)toView;
+
+/**
+ 删除高度对高度约束属性
+ @param  toView             关联的视图
+ @return instancetype       当前视图对象
+ */
+- (instancetype)removeHeightEqualHeightConstraintWithToView:(UIView *)toView;
+
+/**
+ 删除水平居中对水平居中约束属性
+ @param  toView             关联的视图
+ @return instancetype       当前视图对象
+ */
+- (instancetype)removeCenterXEqualCenterXConstraintWithToView:(UIView *)toView;
+
+/**
+ 删除垂直居中对垂直居中约束属性
+ @param  toView             关联的视图
+ @return instancetype       当前视图对象
+ */
+- (instancetype)removeCenterYEqualCenterYConstraintWithToView:(UIView *)toView;
+
 #pragma mark - ADD
 /**
  添加约束属性
@@ -386,6 +471,103 @@ NS_ASSUME_NONNULL_BEGIN
  @return instancetype       当前视图对象
  */
 - (instancetype)addCenterYEqualCenterYConstraintWithSuperview:(UIView *)superview view:(UIView *)view toView:(UIView *)toView constant:(CGFloat)constant;
+
+#pragma mark - ADD TO
+/**
+ 添加上对上约束属性
+ @param  toView             关联的视图
+ @param  constant           大小值
+ @return instancetype       当前视图对象
+ */
+- (instancetype)addTopEqualTopConstraintWithToView:(UIView *)toView constant:(CGFloat)constant;
+
+/**
+ 添加上对下约束属性
+ @param  toView             关联的视图
+ @param  constant           大小值
+ @return instancetype       当前视图对象
+ */
+- (instancetype)addTopEqualBottomConstraintWithToView:(UIView *)toView constant:(CGFloat)constant;
+
+/**
+ 添加下对下约束属性
+ @param  toView             关联的视图
+ @param  constant           大小值
+ @return instancetype       当前视图对象
+ */
+- (instancetype)addBottomEqualBottomConstraintWithToView:(UIView *)toView constant:(CGFloat)constant;
+
+/**
+ 添加下对上约束属性
+ @param  toView             关联的视图
+ @param  constant           大小值
+ @return instancetype       当前视图对象
+ */
+- (instancetype)addBottomEqualTopConstraintWithToView:(UIView *)toView constant:(CGFloat)constant;
+
+/**
+ 添加左对左约束属性
+ @param  toView             关联的视图
+ @param  constant           大小值
+ @return instancetype       当前视图对象
+ */
+- (instancetype)addLeadingEqualLeadingConstraintWithToView:(UIView *)toView constant:(CGFloat)constant;
+
+/**
+ 添加左对右约束属性
+ @param  toView             关联的视图
+ @param  constant           大小值
+ @return instancetype       当前视图对象
+ */
+- (instancetype)addLeadingEqualTrailingConstraintWithToView:(UIView *)toView constant:(CGFloat)constant;
+
+/**
+ 添加右对右约束属性
+ @param  toView             关联的视图
+ @param  constant           大小值
+ @return instancetype       当前视图对象
+ */
+- (instancetype)addTrailingEqualTrailingConstraintWithToView:(UIView *)toView constant:(CGFloat)constant;
+
+/**
+ 添加右对左约束属性
+ @param  toView             关联的视图
+ @param  constant           大小值
+ @return instancetype       当前视图对象
+ */
+- (instancetype)addTrailingEqualLeadingConstraintWithToView:(UIView *)toView constant:(CGFloat)constant;
+
+/**
+ 添加宽度对宽度约束属性
+ @param  toView             关联的视图
+ @param  constant           大小值
+ @return instancetype       当前视图对象
+ */
+- (instancetype)addWidthEqualWidthConstraintWithToView:(UIView *)toView constant:(CGFloat)constant;
+
+/**
+ 添加高度对高度约束属性
+ @param  toView             关联的视图
+ @param  constant           大小值
+ @return instancetype       当前视图对象
+ */
+- (instancetype)addHeightEqualHeightConstraintWithToView:(UIView *)toView constant:(CGFloat)constant;
+
+/**
+ 添加水平居中对水平居中约束属性
+ @param  toView             关联的视图
+ @param  constant           大小值
+ @return instancetype       当前视图对象
+ */
+- (instancetype)addCenterXEqualCenterXConstraintWithToView:(UIView *)toView constant:(CGFloat)constant;
+
+/**
+ 添加垂直居中对垂直居中约束属性
+ @param  toView             关联的视图
+ @param  constant           大小值
+ @return instancetype       当前视图对象
+ */
+- (instancetype)addCenterYEqualCenterYConstraintWithToView:(UIView *)toView constant:(CGFloat)constant;
 
 #pragma mark - ADD SELF
 /**
@@ -630,6 +812,91 @@ NS_ASSUME_NONNULL_BEGIN
  @return CGFloat        约束属性的大小值
  */
 - (CGFloat)getCenterYEqualCenterYConstraintConstantWithSuperview:(UIView *)superview view:(UIView *)view toView:(UIView *)toView;
+
+#pragma mark - GET TO
+/**
+ 获取上对上约束属性的大小值
+ @param  toView         关联的视图
+ @return CGFloat        约束属性的大小值
+ */
+- (CGFloat)getTopEqualTopConstraintConstantWithToView:(UIView *)toView;
+
+/**
+ 获取上对下约束属性的大小值
+ @param  toView         关联的视图
+ @return CGFloat        约束属性的大小值
+ */
+- (CGFloat)getTopEqualBottomConstraintConstantWithToView:(UIView *)toView;
+
+/**
+ 获取下对下约束属性的大小值
+ @param  toView         关联的视图
+ @return CGFloat        约束属性的大小值
+ */
+- (CGFloat)getBottomEqualBottomConstraintConstantWithToView:(UIView *)toView;
+
+/**
+ 获取上对上约束属性的大小值
+ @param  toView         关联的视图
+ @return CGFloat        约束属性的大小值
+ */
+- (CGFloat)getBottomEqualTopConstraintConstantWithToView:(UIView *)toView;
+
+/**
+ 获取左对左约束属性的大小值
+ @param  toView         关联的视图
+ @return CGFloat        约束属性的大小值
+ */
+- (CGFloat)getLeadingEqualLeadingConstraintConstantWithToView:(UIView *)toView;
+
+/**
+ 获取左对右约束属性的大小值
+ @param  toView         关联的视图
+ @return CGFloat        约束属性的大小值
+ */
+- (CGFloat)getLeadingEqualTrailingConstraintConstantWithToView:(UIView *)toView;
+
+/**
+ 获取右对右约束属性的大小值
+ @param  toView         关联的视图
+ @return CGFloat        约束属性的大小值
+ */
+- (CGFloat)getTrailingEqualTrailingConstraintConstantWithToView:(UIView *)toView;
+
+/**
+ 获取右对左约束属性的大小值
+ @param  toView         关联的视图
+ @return CGFloat        约束属性的大小值
+ */
+- (CGFloat)getTrailingEqualLeadingConstraintConstantWithToView:(UIView *)toView;
+
+/**
+ 获取宽度对宽度约束属性的大小值
+ @param  toView         关联的视图
+ @return CGFloat        约束属性的大小值
+ */
+- (CGFloat)getWidthEqualWidthConstraintConstantWithToView:(UIView *)toView;
+
+/**
+ 获取高度对高度约束属性的大小值
+ @param  toView         关联的视图
+ @return CGFloat        约束属性的大小值
+ */
+- (CGFloat)getHeightEqualHeightConstraintConstantWithToView:(UIView *)toView;
+
+/**
+ 获取水平居中对水平居中约束属性的大小值
+ @param  toView         关联的视图
+ @return CGFloat        约束属性的大小值
+ */
+- (CGFloat)getCenterXEqualCenterXConstraintConstantWithToView:(UIView *)toView;
+
+/**
+ 获取垂直居中对垂直居中约束属性的大小值
+ @param  toView         关联的视图
+ @return CGFloat        约束属性的大小值
+ */
+- (CGFloat)getCenterYEqualCenterYConstraintConstantWithToView:(UIView *)toView;
 
 #pragma mark - GET SELF
 /**

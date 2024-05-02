@@ -76,6 +76,55 @@
     return [self removeConstraintWithSuperview:superview view:view viewLayoutAttribute:NSLayoutAttributeCenterY toView:toView toViewLayoutAttribute:NSLayoutAttributeCenterY];
 }
 
+#pragma mark - REMOVE TO
+- (instancetype)removeTopEqualTopConstraintWithToView:(UIView *)toView {
+    return [self removeConstraintWithSuperview:self.superview view:self viewLayoutAttribute:NSLayoutAttributeTop toView:toView toViewLayoutAttribute:NSLayoutAttributeTop];
+}
+
+- (instancetype)removeTopEqualBottomConstraintWithToView:(UIView *)toView {
+    return [self removeConstraintWithSuperview:self.superview view:self viewLayoutAttribute:NSLayoutAttributeTop toView:toView toViewLayoutAttribute:NSLayoutAttributeBottom];
+}
+
+- (instancetype)removeBottomEqualBottomConstraintWithToView:(UIView *)toView {
+    return [self removeConstraintWithSuperview:self.superview view:self viewLayoutAttribute:NSLayoutAttributeBottom toView:toView toViewLayoutAttribute:NSLayoutAttributeBottom];
+}
+
+- (instancetype)removeBottomEqualTopConstraintWithToView:(UIView *)toView {
+    return [self removeConstraintWithSuperview:self.superview view:self viewLayoutAttribute:NSLayoutAttributeBottom toView:toView toViewLayoutAttribute:NSLayoutAttributeTop];
+}
+
+- (instancetype)removeLeadingEqualLeadingConstraintWithToView:(UIView *)toView {
+    return [self removeConstraintWithSuperview:self.superview view:self viewLayoutAttribute:NSLayoutAttributeLeading toView:toView toViewLayoutAttribute:NSLayoutAttributeLeading];
+}
+
+- (instancetype)removeLeadingEqualTrailingConstraintWithToView:(UIView *)toView {
+    return [self removeConstraintWithSuperview:self.superview view:self viewLayoutAttribute:NSLayoutAttributeLeading toView:toView toViewLayoutAttribute:NSLayoutAttributeTrailing];
+}
+
+- (instancetype)removeTrailingEqualTrailingConstraintWithToView:(UIView *)toView {
+    return [self removeConstraintWithSuperview:self.superview view:self viewLayoutAttribute:NSLayoutAttributeTrailing toView:toView toViewLayoutAttribute:NSLayoutAttributeTrailing];
+}
+
+- (instancetype)removeTrailingEqualLeadingConstraintWithToView:(UIView *)toView {
+    return [self removeConstraintWithSuperview:self.superview view:self viewLayoutAttribute:NSLayoutAttributeTrailing toView:toView toViewLayoutAttribute:NSLayoutAttributeLeading];
+}
+
+- (instancetype)removeWidthEqualWidthConstraintWithToView:(UIView *)toView {
+    return [self removeConstraintWithSuperview:self.superview view:self viewLayoutAttribute:NSLayoutAttributeWidth toView:toView toViewLayoutAttribute:NSLayoutAttributeWidth];
+}
+
+- (instancetype)removeHeightEqualHeightConstraintWithToView:(UIView *)toView {
+    return [self removeConstraintWithSuperview:self.superview view:self viewLayoutAttribute:NSLayoutAttributeHeight toView:toView toViewLayoutAttribute:NSLayoutAttributeHeight];
+}
+
+- (instancetype)removeCenterXEqualCenterXConstraintWithToView:(UIView *)toView {
+    return [self removeConstraintWithSuperview:self.superview view:self viewLayoutAttribute:NSLayoutAttributeCenterX toView:toView toViewLayoutAttribute:NSLayoutAttributeCenterX];
+}
+
+- (instancetype)removeCenterYEqualCenterYConstraintWithToView:(UIView *)toView {
+    return [self removeConstraintWithSuperview:self.superview view:self viewLayoutAttribute:NSLayoutAttributeCenterY toView:toView toViewLayoutAttribute:NSLayoutAttributeCenterY];
+}
+
 #pragma mark - REMOVE SELF
 - (instancetype)removeTopEqualTopConstraintWithSuperview:(UIView *)superview toView:(UIView *)toView {
     return [self removeConstraintWithSuperview:superview view:self viewLayoutAttribute:NSLayoutAttributeTop toView:toView toViewLayoutAttribute:NSLayoutAttributeTop];
@@ -198,6 +247,55 @@
     return [self addConstraintWithSuperview:superview view:view viewLayoutAttribute:NSLayoutAttributeCenterY toView:toView toViewLayoutAttribute:NSLayoutAttributeCenterY constant:constant];
 }
 
+#pragma mark - ADD TO
+- (instancetype)addTopEqualTopConstraintWithToView:(UIView *)toView constant:(CGFloat)constant {
+    return [self addConstraintWithSuperview:self.superview view:self viewLayoutAttribute:NSLayoutAttributeTop toView:toView toViewLayoutAttribute:NSLayoutAttributeTop constant:constant];
+}
+
+- (instancetype)addTopEqualBottomConstraintWithToView:(UIView *)toView constant:(CGFloat)constant {
+    return [self addConstraintWithSuperview:self.superview view:self viewLayoutAttribute:NSLayoutAttributeTop toView:toView toViewLayoutAttribute:NSLayoutAttributeBottom constant:constant];
+}
+
+- (instancetype)addBottomEqualBottomConstraintWithToView:(UIView *)toView constant:(CGFloat)constant {
+    return [self addConstraintWithSuperview:self.superview view:self viewLayoutAttribute:NSLayoutAttributeBottom toView:toView toViewLayoutAttribute:NSLayoutAttributeBottom constant:constant];
+}
+
+- (instancetype)addBottomEqualTopConstraintWithToView:(UIView *)toView constant:(CGFloat)constant {
+    return [self addConstraintWithSuperview:self.superview view:self viewLayoutAttribute:NSLayoutAttributeBottom toView:toView toViewLayoutAttribute:NSLayoutAttributeTop constant:constant];
+}
+
+- (instancetype)addLeadingEqualLeadingConstraintWithToView:(UIView *)toView constant:(CGFloat)constant {
+    return [self addConstraintWithSuperview:self.superview view:self viewLayoutAttribute:NSLayoutAttributeLeading toView:toView toViewLayoutAttribute:NSLayoutAttributeLeading constant:constant];
+}
+
+- (instancetype)addLeadingEqualTrailingConstraintWithToView:(UIView *)toView constant:(CGFloat)constant {
+    return [self addConstraintWithSuperview:self.superview view:self viewLayoutAttribute:NSLayoutAttributeLeading toView:toView toViewLayoutAttribute:NSLayoutAttributeTrailing constant:constant];
+}
+
+- (instancetype)addTrailingEqualTrailingConstraintWithToView:(UIView *)toView constant:(CGFloat)constant {
+    return [self addConstraintWithSuperview:self.superview view:self viewLayoutAttribute:NSLayoutAttributeTrailing toView:toView toViewLayoutAttribute:NSLayoutAttributeTrailing constant:constant];
+}
+
+- (instancetype)addTrailingEqualLeadingConstraintWithToView:(UIView *)toView constant:(CGFloat)constant {
+    return [self addConstraintWithSuperview:self.superview view:self viewLayoutAttribute:NSLayoutAttributeTrailing toView:toView toViewLayoutAttribute:NSLayoutAttributeLeading constant:constant];
+}
+
+- (instancetype)addWidthEqualWidthConstraintWithToView:(UIView *)toView constant:(CGFloat)constant {
+    return [self addConstraintWithSuperview:self.superview view:self viewLayoutAttribute:NSLayoutAttributeWidth toView:toView toViewLayoutAttribute:NSLayoutAttributeWidth constant:constant];
+}
+
+- (instancetype)addHeightEqualHeightConstraintWithToView:(UIView *)toView constant:(CGFloat)constant {
+    return [self addConstraintWithSuperview:self.superview view:self viewLayoutAttribute:NSLayoutAttributeHeight toView:toView toViewLayoutAttribute:NSLayoutAttributeHeight constant:constant];
+}
+
+- (instancetype)addCenterXEqualCenterXConstraintWithToView:(UIView *)toView constant:(CGFloat)constant {
+    return [self addConstraintWithSuperview:self.superview view:self viewLayoutAttribute:NSLayoutAttributeCenterX toView:toView toViewLayoutAttribute:NSLayoutAttributeCenterX constant:constant];
+}
+
+- (instancetype)addCenterYEqualCenterYConstraintWithToView:(UIView *)toView constant:(CGFloat)constant {
+    return [self addConstraintWithSuperview:self.superview view:self viewLayoutAttribute:NSLayoutAttributeCenterY toView:toView toViewLayoutAttribute:NSLayoutAttributeCenterY constant:constant];
+}
+
 #pragma mark - ADD SELF
 - (instancetype)addTopEqualTopConstraintWithSuperview:(UIView *)superview toView:(UIView *)toView constant:(CGFloat)constant {
     return [self addConstraintWithSuperview:superview view:self viewLayoutAttribute:NSLayoutAttributeTop toView:toView toViewLayoutAttribute:NSLayoutAttributeTop constant:constant];
@@ -318,6 +416,55 @@
 
 - (CGFloat)getCenterYEqualCenterYConstraintConstantWithSuperview:(UIView *)superview view:(UIView *)view toView:(UIView *)toView {
     return [self getConstraintConstantWithSuperview:superview view:view viewLayoutAttribute:NSLayoutAttributeCenterY toView:toView toViewLayoutAttribute:NSLayoutAttributeCenterY];
+}
+
+#pragma mark - GET TO
+- (CGFloat)getTopEqualTopConstraintConstantWithToView:(UIView *)toView {
+    return [self getConstraintConstantWithSuperview:self.superview view:self viewLayoutAttribute:NSLayoutAttributeTop toView:toView toViewLayoutAttribute:NSLayoutAttributeTop];
+}
+
+- (CGFloat)getTopEqualBottomConstraintConstantWithToView:(UIView *)toView {
+    return [self getConstraintConstantWithSuperview:self.superview view:self viewLayoutAttribute:NSLayoutAttributeTop toView:toView toViewLayoutAttribute:NSLayoutAttributeBottom];
+}
+
+- (CGFloat)getBottomEqualBottomConstraintConstantWithToView:(UIView *)toView {
+    return [self getConstraintConstantWithSuperview:self.superview view:self viewLayoutAttribute:NSLayoutAttributeBottom toView:toView toViewLayoutAttribute:NSLayoutAttributeBottom];
+}
+
+- (CGFloat)getBottomEqualTopConstraintConstantWithToView:(UIView *)toView {
+    return [self getConstraintConstantWithSuperview:self.superview view:self viewLayoutAttribute:NSLayoutAttributeBottom toView:toView toViewLayoutAttribute:NSLayoutAttributeTop];
+}
+
+- (CGFloat)getLeadingEqualLeadingConstraintConstantWithToView:(UIView *)toView {
+    return [self getConstraintConstantWithSuperview:self.superview view:self viewLayoutAttribute:NSLayoutAttributeLeading toView:toView toViewLayoutAttribute:NSLayoutAttributeLeading];
+}
+
+- (CGFloat)getLeadingEqualTrailingConstraintConstantWithToView:(UIView *)toView {
+    return [self getConstraintConstantWithSuperview:self.superview view:self viewLayoutAttribute:NSLayoutAttributeLeading toView:toView toViewLayoutAttribute:NSLayoutAttributeTrailing];
+}
+
+- (CGFloat)getTrailingEqualTrailingConstraintConstantWithToView:(UIView *)toView {
+    return [self getConstraintConstantWithSuperview:self.superview view:self viewLayoutAttribute:NSLayoutAttributeTrailing toView:toView toViewLayoutAttribute:NSLayoutAttributeTrailing];
+}
+
+- (CGFloat)getTrailingEqualLeadingConstraintConstantWithToView:(UIView *)toView {
+    return [self getConstraintConstantWithSuperview:self.superview view:self viewLayoutAttribute:NSLayoutAttributeTrailing toView:toView toViewLayoutAttribute:NSLayoutAttributeLeading];
+}
+
+- (CGFloat)getWidthEqualWidthConstraintConstantWithToView:(UIView *)toView {
+    return [self getConstraintConstantWithSuperview:self.superview view:self viewLayoutAttribute:NSLayoutAttributeWidth toView:toView toViewLayoutAttribute:NSLayoutAttributeWidth];
+}
+
+- (CGFloat)getHeightEqualHeightConstraintConstantWithToView:(UIView *)toView {
+    return [self getConstraintConstantWithSuperview:self.superview view:self viewLayoutAttribute:NSLayoutAttributeHeight toView:toView toViewLayoutAttribute:NSLayoutAttributeHeight];
+}
+
+- (CGFloat)getCenterXEqualCenterXConstraintConstantWithToView:(UIView *)toView {
+    return [self getConstraintConstantWithSuperview:self.superview view:self viewLayoutAttribute:NSLayoutAttributeCenterX toView:toView toViewLayoutAttribute:NSLayoutAttributeCenterX];
+}
+
+- (CGFloat)getCenterYEqualCenterYConstraintConstantWithToView:(UIView *)toView {
+    return [self getConstraintConstantWithSuperview:self.superview view:self viewLayoutAttribute:NSLayoutAttributeCenterY toView:toView toViewLayoutAttribute:NSLayoutAttributeCenterY];
 }
 
 #pragma mark - GET SELF

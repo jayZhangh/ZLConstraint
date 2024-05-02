@@ -21,6 +21,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+    NSLog(@"%f", ZLScaleValue(20));
+    
     UIView *view1 = [[UIView alloc] init];
     view1.backgroundColor = [UIColor redColor];
     [self.view addSubview:view1];
@@ -44,7 +46,26 @@
     [view2 addCenterXEqualCenterXConstraintWithSuperview:self.view toView:self.constraintView constant:0];
     [view2 addCenterYEqualCenterYConstraintWithSuperview:self.view toView:view1 constant:0];
     
-    NSLog(@"%f", ZLScaleValue(20));
+    UIView *view3 = [[UIView alloc] init];
+    view3.backgroundColor = [UIColor lightGrayColor];
+    [self.view addSubview:view3];
+
+    [view3 addLeadingEqualLeadingConstraintWithToView:self.constraintView constant:10];
+    [view3 addTrailingEqualTrailingConstraintWithToView:self.view constant:-20];
+    [view3 addTopEqualTopConstraintWithToView:self.constraintView constant:30];
+    [view3 addBottomEqualBottomConstraintWithToView:self.view constant:-40];
+    
+    CGFloat leadingConstant = [view3 getLeadingEqualLeadingConstraintConstantWithToView:self.constraintView];
+    CGFloat trailingConstant = [view3 getTrailingEqualTrailingConstraintConstantWithToView:self.view];
+    CGFloat topConstant = [view3 getTopEqualTopConstraintConstantWithToView:self.constraintView];
+    CGFloat bottomConstant = [view3 getBottomEqualBottomConstraintConstantWithToView:self.view];
+    NSLog(@"%f   %f   %f   %f", leadingConstant, trailingConstant, topConstant, bottomConstant);
+    
+    [view3 removeLeadingEqualLeadingConstraintWithToView:self.constraintView];
+    leadingConstant = [view3 getLeadingEqualLeadingConstraintConstantWithToView:self.constraintView];
+    NSLog(@"%f   %f   %f   %f", leadingConstant, trailingConstant, topConstant, bottomConstant);
+    
+    [view3 addLeadingEqualLeadingConstraintWithToView:view1 constant:10];
 }
 
 @end
